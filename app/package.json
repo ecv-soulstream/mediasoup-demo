@@ -8,7 +8,9 @@
   "main": "lib/index.jsx",
   "scripts": {
     "lint": "eslint -c .eslintrc.js --ext .js,.jsx gulpfile.js lib",
-    "start": "gulp live"
+    "start": "gulp live",
+    "devel": "gulp devel",
+    "devel:vp9": "gulp devel:vp9"
   },
   "dependencies": {
     "@babel/runtime": "^7.8.4",
