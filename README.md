@@ -1,9 +1,6 @@
-# mediasoup-demo v3
+# mvp-alpha
 
-A demo application of [mediasoup](https://mediasoup.org) **v3**.
-
-Try it online at https://v3demo.mediasoup.org.
-
+The SoulStream MVP app and server based on [Mediasoup demo](https://github.com/versatica/mediasoup-demo.git)
 
 ## Resources
 
@@ -16,8 +13,8 @@ Try it online at https://v3demo.mediasoup.org.
 * Clone the project:
 
 ```bash
-$ git clone https://github.com/versatica/mediasoup-demo.git
-$ cd mediasoup-demo
+$ git clone https://github.com/ecv-soulstream/mvp-alpha.git
+$ cd mvp-alpha
 $ git checkout v3
 ```
 
