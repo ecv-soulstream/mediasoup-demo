@@ -7,7 +7,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import { Login, Welcome } from './pages';
+import { Login, Signup, Welcome } from './pages';
 
 const useStyles = makeStyles({
   root: {
@@ -30,6 +30,9 @@ function App() {
             <Switch>
               <Route path="/login">
                 <Login />
+              </Route>
+              <Route path="/signup">
+                <Signup />
               </Route>
               <Route path="/">
                 <Welcome />
