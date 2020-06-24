@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   BrowserRouter as Router,
@@ -14,6 +13,9 @@ const useStyles = makeStyles({
     width: '100%',
     // maxWidth: 500,
   },
+  logo: {
+    width: "80%",
+  }
 });
 
 function App() {
@@ -25,8 +27,7 @@ function App() {
 
         <div className={classes.root}>
           <header className="App-header">
-            <Typography component="h1">Soul Stream</Typography>
-            {/* TODO: add a header here */}
+            <img src="logo_ss.png" alt="logo" className={classes.logo}/>
             <Switch>
               <Route path="/login">
                 <Login />

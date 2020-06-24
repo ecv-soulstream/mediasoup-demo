@@ -2,14 +2,18 @@ import React from 'react';
 import { Typography, TextField, Paper, Box, Button } from '@material-ui/core';
 import { Link } from "react-router-dom";
 
-import { PasswordInput } from '../components'
+import { PasswordInput, TextInput } from '../components'
 import '../App.css';
 
 export default function Login() {
   // Figure out the data to populate here...
 
+  function onInputChange(val: string) {
+    console.log(val)
+  }
+
   function onPasswordChange(val: string) {
-    console.log("Login: pass=", val)
+    console.log(val)
   }
 
   return (
@@ -17,8 +21,8 @@ export default function Login() {
       <Box flexDirection="column">
         <Typography component="h3">Log In:</Typography>
         <Box flexDirection="column">
-          <TextField label="User Name" variant="outlined"></TextField>
-          <PasswordInput label="Password" variant="outlined" onPasswordChange={onPasswordChange} />
+          <TextInput label="User Name" onInputChange={onInputChange} />
+          <PasswordInput label="Password" onPasswordChange={onPasswordChange} />
         </Box>
         <Button variant="contained" color="primary" >Log in</Button>
         <Box>
