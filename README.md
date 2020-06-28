@@ -59,6 +59,9 @@ $ cd app
 $ npm start
 ```
 
+* In chrome, navigate to https://192.168.1.66:3000/?serverUrl=soulstream.live&roomId=dev&forceVP9=true to run using VP9 SVC
+* Otherwise, navigate to https://192.168.1.66:3000/?serverUrl=soulstream.live&roomId=dev to run with VP8 in any browser
+
 * Enjoy.
 
 
