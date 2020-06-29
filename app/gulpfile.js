@@ -243,6 +243,9 @@ gulp.task('browser:base', gulp.series(
 	'watch'
 ));
 
+// Use this to override the protoo server url
+const serverUrlProp = '&serverUrl=soulstream.live'; // 'localhost';
+
 gulp.task('live', gulp.series(
 	'browser:base',
 	(done) =>
@@ -371,14 +374,15 @@ gulp.task('devel:vp9', gulp.series(
 				{
 					open      : 'external',
 					host      : config.domain,
-					startPath : '/?roomId=devel:vp9&info=true&_throttleSecret=foo&forceVP9=true&svc=L3T3&consume=false',
+					startPath : `/?roomId=devel:vp9&info=true&_throttleSecret=foo&forceVP9=true&svc=L3T3&consume=false${serverUrlProp}`,
 					server    :
 					{
 						baseDir : OUTPUT_DIR
 					},
 					https     : config.https.tls,
 					ghostMode : false,
-					files     : path.join(OUTPUT_DIR, '**', '*')
+          files     : path.join(OUTPUT_DIR, '**', '*'),
+          browser   : "chromium-browser" // comment this out in normal usage...
 				},
 				resolve);
 		});
@@ -389,14 +393,15 @@ gulp.task('devel:vp9', gulp.series(
 				{
 					open      : 'external',
 					host      : config.domain,
-					startPath : '/?roomId=devel:vp9&info=true&_throttleSecret=foo&forceVP9=true&svc=L3T3&produce=false',
+					startPath : `/?roomId=devel:vp9&info=true&_throttleSecret=foo&forceVP9=true&svc=L3T3&produce=false${serverUrlProp}`,
 					server    :
 					{
 						baseDir : OUTPUT_DIR
 					},
 					https     : config.https.tls,
 					ghostMode : false,
-					files     : path.join(OUTPUT_DIR, '**', '*')
+          files     : path.join(OUTPUT_DIR, '**', '*'),
+          browser   : "chromium-browser" // "firefox" no vp9 support...
 				},
 				resolve);
 		});
